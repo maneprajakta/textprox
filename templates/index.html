@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body{
+    background-color: #EAC67A;
+    font-family: 'Architects Daughter', cursive ,sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+          }
+      .heading{
+        margin: 0 auto;
+        background-color: #233237;
+        font-family: 'Balsamiq Sans', cursive , sans-serif;
+        color: white;
+      }
+      .sub-heading{
+        margin: 0 auto;
+        color: #984B43;
+        font-family: 'Satisfy', cursive ,sans-serif;
+      }
+      .combine{
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .form-control
+      {
+        border: 5px solid grey;
+      }
+
+    </style>
+    <title>textpro.com</title>
+  </head>
+    <div class="combine">
+      <h1 class="heading">textpro</h1>
+      <h1 class ="sub-heading">there to solve your messy texts.</h1>
+    </div>
+      <div class="container">
+          <form action='/analyze' method='post' >
+              {% csrf_token %}
+              <div class="form-group">
+          <label for="exampleFormControlTextarea1">ENTER TEXT BELOW.</label>
+          <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="12"></textarea>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">REMOVE PUNCTUATORS</label><br/>
+      </div>
+      <div class="custom-control custom-switch">
+          <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch2">
+        <label class="custom-control-label" for="customSwitch2">UPPER CASE</label><br/>
+      </div>
+      <div class="custom-control custom-switch">
+          <input type="checkbox" name="newlineremover" class="custom-control-input" id="customSwitch3">
+        <label class="custom-control-label" for="customSwitch3">NEW LINE REMOVER</label><br/>
+      </div>
+      <div class="custom-control custom-switch">
+          <input type="checkbox" name="extraspaceremover" class="custom-control-input" id="customSwitch4">
+        <label class="custom-control-label" for="customSwitch4">EXTRA SPACE  REMOVER</label><br/>
+      </div>
+      <div class="custom-control custom-switch">
+          <input type="checkbox" name="charcount" class="custom-control-input" id="customSwitch5">
+        <label class="custom-control-label" for="customSwitch5">CHARACTER COUNT</label>
+      </div>
+        <button type="submit" class="btn btn-dark mt-2" >SUBMIT</button>
+      </form>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
